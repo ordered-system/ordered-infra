@@ -1,0 +1,11 @@
+{$BASE_DOMAIN} {
+	reverse_proxy gateway:8080
+}
+
+grafana.{$BASE_DOMAIN} {
+	reverse_proxy grafana:3000
+}
+
+jaeger.{$BASE_DOMAIN} {
+	reverse_proxy jaeger:16686
+}
