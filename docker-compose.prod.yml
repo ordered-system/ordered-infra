@@ -165,6 +165,7 @@ services:
     environment:
       CONFIG_SERVER_URL: http://config-server:8888
       EUREKA_URL: http://eureka:8761/eureka/
+      PRODUCT_SERVICE_URL: http://product-service:9092
       OTLP_ENDPOINT: http://jaeger:4318/v1/traces
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
       DB_URL: jdbc:postgresql://postgres-order:5432/order_db
