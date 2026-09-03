@@ -44,7 +44,7 @@ prod-down: ## Stop the production stack (keeps data volumes)
 	docker compose -f docker-compose.prod.yml --env-file .env.prod down
 
 prod-logs: ## Tail logs from every production container
-	docker compose -f docker-compose.prod.yml logs -f
+	docker compose -f docker-compose.prod.yml --env-file .env.prod logs -f
 
 prod-ps: ## Show production container status
 	docker compose -f docker-compose.prod.yml --env-file .env.prod ps
