@@ -47,7 +47,7 @@ prod-logs: ## Tail logs from every production container
 	docker compose -f docker-compose.prod.yml logs -f
 
 prod-ps: ## Show production container status
-	docker compose -f docker-compose.prod.yml ps
+	docker compose -f docker-compose.prod.yml --env-file .env.prod ps
 
 prod-build: ## Rebuild and restart one production service, e.g. make prod-build SERVICE=order-service
 	docker compose -f docker-compose.prod.yml --env-file .env.prod up -d --build $(SERVICE)
